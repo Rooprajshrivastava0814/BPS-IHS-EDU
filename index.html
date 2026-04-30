@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BPS International High School | AI Powered Learning</title>
+    <!-- Premium Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* CSS / Design start hota hai yahan se */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            background-color: #f4f7f6;
+            color: #333;
+        }
+
+        /* Top Navigation Bar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            background-color: #0A192F; /* Premium dark blue */
+            color: white;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav .logo {
+            font-size: 26px;
+            font-weight: 700;
+            color: #FFD700; /* Gold */
+            letter-spacing: 1px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 35px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 400;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #FFD700;
+        }
+
+        /* Main Hero Section */
+        .hero {
+            height: 85vh;
+            background: linear-gradient(rgba(10, 25, 47, 0.7), rgba(10, 25, 47, 0.8)), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=2070&auto=format&fit=crop') center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #FFD700;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 750px;
+            margin-bottom: 35px;
+            font-weight: 300;
+            line-height: 1.6;
+        }
+
+        .hero .btn {
+            padding: 15px 35px;
+            background-color: #FFD700;
+            color: #0A192F;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .hero .btn:hover {
+            background-color: #fff;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0A192F;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Area -->
+    <nav>
+        <div class="logo">B.P.S. INTERNATIONAL</div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Academics</a></li>
+            <li><a href="#">Admissions</a></li>
+            <li><a href="#">Student Portal</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Banner Area -->
+    <section class="hero">
+        <h1>Welcome to <span>B.P.S. International High School</span></h1>
+        <p>Experience the future of education. We combine a world-class curriculum with our state-of-the-art AI Student Portal to manage your classes and assignments seamlessly.</p>
+        <a href="#" class="btn">Login to Portal</a>
+    </section>
+
+    <!-- Footer Area -->
+    <footer>
+        <p>&copy; 2026 B.P.S. International High School. All Rights Reserved. | AI-Powered Campus</p>
+    </footer>
+
+    <!-- TERA IBM WATSON ASSISTANT SCRIPT YAHAN HAI -->
+    <script>
+      window.watsonAssistantChatOptions = {
+        integrationID: "39f045d4-94ec-4c3b-b9a0-720f95c94358", // The ID of this integration.
+        region: "eu-de", // The region your integration is hosted in.
+        serviceInstanceID: "b06e6369-db6d-408e-9a53-abf8a7245a8f", // The ID of your service instance.
+        onLoad: async (instance) => { await instance.render(); }
+      };
+      setTimeout(function(){
+        const t=document.createElement('script');
+        t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+        document.head.appendChild(t);
+      });
+    </script>
+
+</body>
+</html>
