@@ -3,149 +3,276 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BPS International High School | AI Powered Learning</title>
-    <!-- Premium Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>BPS International | AI Smart Campus</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&display=swap" rel="stylesheet">
     
     <style>
-        /* CSS / Design start hota hai yahan se */
+        /* === BASE & ANIMATIONS === */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
-        
-        body {
-            background-color: #f4f7f6;
-            color: #333;
+            font-family: 'Space Grotesk', sans-serif;
         }
 
-        /* Top Navigation Bar */
+        body {
+            background-color: #0b0f19;
+            color: #ffffff;
+            overflow-x: hidden;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        /* === GLOWING BACKGROUND ORBS === */
+        .glow-orb-1 {
+            position: absolute;
+            top: -10%;
+            left: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(0, 113, 255, 0.4) 0%, rgba(0,0,0,0) 70%);
+            border-radius: 50%;
+            filter: blur(60px);
+            z-index: -1;
+            animation: float 8s infinite alternate;
+        }
+
+        .glow-orb-2 {
+            position: absolute;
+            bottom: -10%;
+            right: -5%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(0, 255, 200, 0.3) 0%, rgba(0,0,0,0) 70%);
+            border-radius: 50%;
+            filter: blur(80px);
+            z-index: -1;
+            animation: float 10s infinite alternate-reverse;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px) scale(1); }
+            100% { transform: translateY(30px) scale(1.1); }
+        }
+
+        /* === MODERN FLOATING NAVBAR === */
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 8%;
-            background-color: #0A192F; /* Premium dark blue */
-            color: white;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            padding: 20px 5%;
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
             position: sticky;
             top: 0;
             z-index: 100;
         }
 
         nav .logo {
-            font-size: 26px;
+            font-size: 24px;
             font-weight: 700;
-            color: #FFD700; /* Gold */
-            letter-spacing: 1px;
+            background: linear-gradient(90deg, #00f2fe 0%, #4facfe 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 2px;
         }
 
         nav ul {
             display: flex;
             list-style: none;
-        }
-
-        nav ul li {
-            margin-left: 35px;
+            gap: 40px;
         }
 
         nav ul li a {
-            color: white;
+            color: #a0aec0;
             text-decoration: none;
-            font-weight: 400;
-            transition: color 0.3s;
+            font-weight: 600;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            position: relative;
         }
 
         nav ul li a:hover {
-            color: #FFD700;
+            color: #ffffff;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
         }
 
-        /* Main Hero Section */
+        /* === HERO SECTION (SPLIT LAYOUT) === */
         .hero {
-            height: 85vh;
-            background: linear-gradient(rgba(10, 25, 47, 0.7), rgba(10, 25, 47, 0.8)), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=2070&auto=format&fit=crop') center/cover;
             display: flex;
-            flex-direction: column;
-            justify-content: center;
             align-items: center;
-            text-align: center;
-            color: white;
-            padding: 0 20px;
+            justify-content: space-between;
+            min-height: 80vh;
+            padding: 0 8%;
+            gap: 50px;
         }
 
-        .hero h1 {
-            font-size: 55px;
-            font-weight: 700;
+        .hero-text {
+            flex: 1;
+        }
+
+        .hero-text h1 {
+            font-size: 4rem;
+            line-height: 1.1;
             margin-bottom: 20px;
+            font-weight: 700;
         }
 
-        .hero h1 span {
-            color: #FFD700;
+        .hero-text h1 span {
+            color: #00f2fe;
+            text-shadow: 0 0 20px rgba(0, 242, 254, 0.4);
         }
 
-        .hero p {
-            font-size: 18px;
-            max-width: 750px;
-            margin-bottom: 35px;
-            font-weight: 300;
-            line-height: 1.6;
+        .hero-text p {
+            font-size: 1.1rem;
+            color: #a0aec0;
+            margin-bottom: 40px;
+            line-height: 1.8;
+            max-width: 90%;
         }
 
-        .hero .btn {
-            padding: 15px 35px;
-            background-color: #FFD700;
-            color: #0A192F;
-            text-decoration: none;
+        /* === NEON GLOW BUTTON === */
+        .btn-glow {
+            display: inline-block;
+            padding: 16px 40px;
             font-size: 16px;
-            font-weight: 600;
-            border-radius: 30px;
+            font-weight: 700;
+            color: #0b0f19;
+            background: linear-gradient(90deg, #00f2fe 0%, #4facfe 100%);
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            text-decoration: none;
+            box-shadow: 0 0 20px rgba(0, 242, 254, 0.4);
             transition: all 0.3s ease;
         }
 
-        .hero .btn:hover {
-            background-color: #fff;
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        .btn-glow:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 0 35px rgba(0, 242, 254, 0.7);
         }
 
-        /* Footer */
-        footer {
-            background-color: #0A192F;
-            color: white;
+        /* === GLASSMORPHISM LOGIN CARD === */
+        .hero-card {
+            flex: 0.8;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            padding: 50px 40px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
             text-align: center;
-            padding: 20px 0;
+            animation: float 6s infinite alternate;
+        }
+
+        .hero-card h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .hero-card p {
+            color: #a0aec0;
+            margin-bottom: 30px;
             font-size: 14px;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            color: white;
+            font-size: 14px;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .input-group input:focus {
+            border-color: #00f2fe;
+            box-shadow: 0 0 10px rgba(0, 242, 254, 0.2);
+        }
+
+        .btn-login {
+            width: 100%;
+            padding: 15px;
+            background: white;
+            color: #0b0f19;
+            font-weight: 700;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .btn-login:hover {
+            background: #00f2fe;
+            color: white;
+            box-shadow: 0 0 15px rgba(0, 242, 254, 0.5);
+        }
+
+        /* === RESPONSIVENESS (MOBILE & TABLET) === */
+        @media (max-width: 991px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding: 40px 5%;
+            }
+            .hero-text h1 { font-size: 3rem; }
+            .hero-text p { margin: 0 auto 30px auto; }
+            nav ul { display: none; /* Hide links on mobile for clean look */ }
+            .hero-card { width: 100%; max-width: 450px; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Navigation Area -->
+    <!-- Background Orbs -->
+    <div class="glow-orb-1"></div>
+    <div class="glow-orb-2"></div>
+
+    <!-- Navbar -->
     <nav>
-        <div class="logo">B.P.S. INTERNATIONAL</div>
+        <div class="logo">B.P.S. INT.</div>
         <ul>
-            <li><a href="#">Home</a></li>
+            <li><a href="#">Dashboard</a></li>
             <li><a href="#">Academics</a></li>
-            <li><a href="#">Admissions</a></li>
-            <li><a href="#">Student Portal</a></li>
+            <li><a href="#">AI Hub</a></li>
+            <li><a href="#">Contact</a></li>
         </ul>
     </nav>
 
-    <!-- Main Banner Area -->
+    <!-- Hero Section -->
     <section class="hero">
-        <h1>Welcome to <span>B.P.S. International High School</span></h1>
-        <p>Experience the future of education. We combine a world-class curriculum with our state-of-the-art AI Student Portal to manage your classes and assignments seamlessly.</p>
-        <a href="#" class="btn">Login to Portal</a>
+        <div class="hero-text">
+            <h1>Next-Gen Education<br>Powered by <span>IBM AI</span></h1>
+            <p>Welcome to B.P.S. International High School. Access your intelligent student portal, track assignments, and let our 24/7 AI Watson Assistant handle your academic schedule.</p>
+            <a href="#" class="btn-glow">Explore Campus</a>
+        </div>
+
+        <div class="hero-card">
+            <h3>Student Portal</h3>
+            <p>Enter your credentials to sync with AI</p>
+            <div class="input-group">
+                <input type="text" placeholder="Student ID (e.g., LPU-2026)">
+            </div>
+            <div class="input-group">
+                <input type="password" placeholder="Passcode">
+            </div>
+            <button class="btn-login">Initialize Session</button>
+        </div>
     </section>
 
-    <!-- Footer Area -->
-    <footer>
-        <p>&copy; 2026 B.P.S. International High School. All Rights Reserved. | AI-Powered Campus</p>
-    </footer>
-
-    <!-- TERA IBM WATSON ASSISTANT SCRIPT YAHAN HAI -->
+    <!-- IBM WATSON SCRIPT (Tera exact code) -->
     <script>
       window.watsonAssistantChatOptions = {
         integrationID: "39f045d4-94ec-4c3b-b9a0-720f95c94358", // The ID of this integration.
